@@ -460,8 +460,8 @@ RectTransform:
   m_Father: {fileID: 835121119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -861,7 +861,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3be07863c7d5db74e9faf4658e4e920d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 82d2d3c62bdf0ca4ba719a24c896d369, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -956,7 +956,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 750130602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25550fc237e507a4886331a8532d20bc, type: 3}
+  m_Script: {fileID: 11500000, guid: d7ebcb7b59e9de94fbbe44b3d954f273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 750130604}
@@ -1342,8 +1342,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1358,7 +1358,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 694a10bd2555baa46bd540e57f1ce6c0, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 384714580f5fc3b43b7fe9f8b1aea818, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -1518,7 +1518,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1620,8 +1620,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: OPTIONS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1636,7 +1636,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 694a10bd2555baa46bd540e57f1ce6c0, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 384714580f5fc3b43b7fe9f8b1aea818, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -1755,8 +1755,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: OPTIONS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1771,7 +1771,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 694a10bd2555baa46bd540e57f1ce6c0, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 384714580f5fc3b43b7fe9f8b1aea818, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -1893,8 +1893,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1909,7 +1909,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 694a10bd2555baa46bd540e57f1ce6c0, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 384714580f5fc3b43b7fe9f8b1aea818, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -2131,7 +2131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794333617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e509f30c43e33904e8572a479035aad0, type: 3}
+  m_Script: {fileID: 11500000, guid: 208f229ffd3f8a94291c69aeb360d6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1874579701
@@ -2181,7 +2181,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d188fcf0feb191c488f455116f13d989, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 858a08a6eaed91143861bb2756fa2023, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
@@ -2333,7 +2333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22823778bb05c3a4fb4f0b5e62aea394, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c860ca3960acef34983d168b7bca719a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2552,8 +2552,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2568,7 +2568,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 694a10bd2555baa46bd540e57f1ce6c0, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 384714580f5fc3b43b7fe9f8b1aea818, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -2687,8 +2687,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '  PLAY'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: e05add505f8576b4eb8d108a39fe1c5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2703,7 +2703,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 694a10bd2555baa46bd540e57f1ce6c0, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 384714580f5fc3b43b7fe9f8b1aea818, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
