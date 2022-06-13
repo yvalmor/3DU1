@@ -280,7 +280,6 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.meta
 *.obj
 *.iobj
 *.pch
@@ -649,3 +648,9 @@ Desktop.ini
 .DS_Store
 
 _NCrunch*
+
+### User defined
+Assets/RPGPP_LT
+Assets/RPGPP_LT.meta
+Assets/TextMesh Pro
+Assets/TextMesh Pro.meta
