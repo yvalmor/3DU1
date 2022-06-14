@@ -1551,6 +1551,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1648968912}
     - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
+      propertyPath: expusionForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
       propertyPath: _pools.Array.data[0]
       value: 
       objectReference: {fileID: 1648968912}
@@ -4040,6 +4044,10 @@ PrefabInstance:
       propertyPath: _pools
       value: 
       objectReference: {fileID: 3331257}
+    - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
+      propertyPath: expusionForce
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
       propertyPath: _pools.Array.data[0]
       value: 
@@ -7912,6 +7920,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
+      propertyPath: expusionForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
       propertyPath: startingDelay
       value: 5
       objectReference: {fileID: 0}
@@ -7984,6 +7996,10 @@ PrefabInstance:
       propertyPath: _pools
       value: 
       objectReference: {fileID: 1648968912}
+    - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
+      propertyPath: expusionForce
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
       propertyPath: _pools.Array.data[0]
       value: 
@@ -14022,6 +14038,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3331257}
     - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
+      propertyPath: expusionForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
       propertyPath: startingDelay
       value: 2
       objectReference: {fileID: 0}
@@ -15400,6 +15420,14 @@ PrefabInstance:
       propertyPath: groundMask.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 2702564014064745170, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
+      propertyPath: groundMask.Array.data[0].m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702564014064745170, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
+      propertyPath: groundMask.Array.data[1].m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 2702564014105731798, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 2147483647
@@ -15411,6 +15439,14 @@ PrefabInstance:
     - target: {fileID: 5706764955875852974, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
       propertyPath: mouseSensitivity
       value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120909912813150317, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120909912813150317, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
@@ -15431,7 +15467,7 @@ PrefabInstance:
       objectReference: {fileID: 1648968912}
     - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
       propertyPath: expusionForce
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1284658395367984969, guid: cfdd15b703975654284ddd86f294c0e1, type: 3}
       propertyPath: _pools.Array.data[0]
