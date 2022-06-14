@@ -1,23 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
 public class BulletCounter : MonoBehaviour
 {
-
-    public TextMeshProUGUI currBullets;
-    public TextMeshProUGUI maxBullets;
+    public TextMeshProUGUI currBulletText;
+    public TextMeshProUGUI maxBulletText;
 
     public void SetMaxBullet(int bullet)
     {
-        maxBullets.text = bullet.ToString();
-        currBullets.text = bullet.ToString();
+        maxBulletText.text = bullet.ToString();
+        currBulletText.text = bullet.ToString();
     }
 
     public void SetBullet(int bullet)
     {
-        currBullets.text = bullet.ToString();
+        currBulletText.text = bullet.ToString();
     }
 }

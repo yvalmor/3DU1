@@ -12,8 +12,15 @@ public class BulletManagement : MonoBehaviour
     public Transform cameraTransform;
     public Transform playerTransform;
 
-    public int bulletFired = 0;
+    public BulletCounter counter;
     
+    public int bulletFired = 0;
+
+    private void Start()
+    {
+        counter.SetMaxBullet(20);
+    }
+
     private void Fire()
     {
         GameObject bullet = pool.GetPooledObject();
@@ -34,12 +41,13 @@ public class BulletManagement : MonoBehaviour
         bullet.SetActive(true);
 
         bulletFired++;
+        counter.SetBullet(20 - bulletFired);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && bulletFired < 20)
             Fire();
         
         if (Input.GetButtonDown("Fire2"))
@@ -52,7 +60,8 @@ public class BulletManagement : MonoBehaviour
                      poolObject.activeSelf &&
                      Vector3.Distance(poolObject.transform.position, transform.position) >= resetDistance))
             poolObject.SetActive(false);
-        
-        
+
+        bulletFired = 0;
+        counter.SetBullet(20);
     }
 }
