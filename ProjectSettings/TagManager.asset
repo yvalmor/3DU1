@@ -9,17 +9,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-<<<<<<< HEAD
-  - Ground
-=======
-  - Player
->>>>>>> cc7f3ecf77799ede1c5c6f7766d638e2fe7f0ad1
+  - 
   - Water
   - UI
-  - Intangible
-  - Bullets
-  - Floor
-  - Entities
+  - 
+  - 
+  - 
+  - Player
   - 
   - 
   - 

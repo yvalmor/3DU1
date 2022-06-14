@@ -10,7 +10,7 @@ public abstract class Entity : MonoBehaviour
         life = MaxLife;
     }
 
-    public void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount)
     {
         life = Mathf.Clamp(life - amount, 0, MaxLife);
         
