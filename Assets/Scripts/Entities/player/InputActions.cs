@@ -24,7 +24,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     ""name"": ""3DU1"",
     ""maps"": [
         {
-            ""name"": ""Player"",
+            ""name"": ""PlayerEntity"",
             ""id"": ""349c06a3-340a-4eb6-9203-985079a8f983"",
             ""actions"": [
                 {
@@ -878,8 +878,8 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         }
     ]
 }");
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        // PlayerEntity
+        m_Player = asset.FindActionMap("PlayerEntity", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
@@ -952,7 +952,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Player
+    // PlayerEntity
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
