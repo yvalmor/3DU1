@@ -35,7 +35,9 @@ public class Spawner : MonoBehaviour
             {
                 enemy.transform.position = _tr.position;
                 enemy.transform.rotation = _tr.rotation;
+
                 enemy.SetActive(true);
+                
                 Rigidbody enemyRb = enemy.GetComponent<Rigidbody>();
                 enemyRb.velocity += _tr.forward * expusionForce;
             }

@@ -8,14 +8,11 @@ public class BulletCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         Entity entity = other.GetComponent<Entity>();
-        if (entity != null){
+        
+        if (entity != null) {
             entity.TakeDamage(bulletDamage);
         }
 
         gameObject.SetActive(false);
-    }
-    void Update()
-    {
-        
     }
 }
