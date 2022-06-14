@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Entities;
+using Entities.Enemy;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -11,7 +12,6 @@ public class Spawner : MonoBehaviour
     public ObjectPool _pool;
     public float startingDelay = 0f;
     private static float repeatDelay = 10f;
-    public float expusionForce = 1f;
 
     private void Awake()
     {
@@ -30,16 +30,15 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             GameObject enemy = _pool.GetPooledObject();
-
+            
             if (enemy is not null)
             {
+                enemy.GetComponent<EnemyEntity>().Reset();
+                
                 enemy.transform.position = _tr.position;
                 enemy.transform.rotation = _tr.rotation;
 
                 enemy.SetActive(true);
-                
-                Rigidbody enemyRb = enemy.GetComponent<Rigidbody>();
-                enemyRb.velocity += _tr.forward * expusionForce;
             }
 
             yield return new WaitForSeconds(repeatDelay);

@@ -8,7 +8,7 @@ public class ChaseState : StateMachineBehaviour
     Transform playerTransfrom;
     NavMeshAgent agent;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent = animator.GetComponent<NavMeshAgent>();
         playerTransfrom = GameObject.FindGameObjectWithTag("Player").transform;
@@ -16,19 +16,26 @@ public class ChaseState : StateMachineBehaviour
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent.SetDestination(playerTransfrom.position);
 
         float distance = Vector3.Distance(playerTransfrom.position, animator.transform.position);
+        
         if (distance > 15)
             animator.SetBool("IsChasing", false);
+        if (distance > 50)
+            animator.SetBool("HasBeenAttacked", false);
+        
         if (distance < 2.5f)
+        {
             animator.SetBool("IsAttacking", true);
+            animator.SetBool("HasBeenAttacked", false);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent.SetDestination(animator.transform.position);
     }

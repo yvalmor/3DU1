@@ -1,37 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-
     public Slider slider;
     public Gradient gradient;
     public Image fill;
-    public int newHealth;
+    public Entity entity;
 
-    void Update()
+    private void Start()
     {
-        if (slider.value > newHealth)
-        {
-            slider.value -= (slider.value - newHealth) * Time.deltaTime;
-            fill.color = gradient.Evaluate(slider.normalizedValue);
-        }
+        SetMaxHealth(entity.MaxLife);
+    }
+    
+    private void Update()
+    {
+        if (slider.value <= entity.life) return;
+        
+        slider.value -= (slider.value - entity.life) * Time.deltaTime;
+        fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 
-    public void SetMaxHealth(int health)
+    private void SetMaxHealth(float health)
     {
         slider.maxValue = health;
         slider.value = health;
 
-        newHealth = health;
-
         fill.color = gradient.Evaluate(1f);
-    }
-
-    public void SetHealth(int health)
-    {
-        newHealth = health;
     }
 }

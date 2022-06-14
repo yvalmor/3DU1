@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,18 +7,43 @@ namespace Entities.Enemy
     public class EnemyEntity : Entity
     {
         public Animator animator;
-        public float damage;
         public Slider healthBar;
+        public float damage;
+
+        private Collider _cl;
+
+        private static readonly int DamageID = Animator.StringToHash("Damage");
+        private static readonly int DieID = Animator.StringToHash("Die");
+
+        void Awake()
+        {
+            _cl = GetComponent<Collider>();
+        }
+
+        private void Start()
+        {
+            life = MaxLife;
+            healthBar.maxValue = MaxLife;
+        }
 
         void Update()
         {
             healthBar.value = life;
         }
 
-        protected override void Die()
+        protected override IEnumerator Die()
         {
-            animator.SetTrigger("Die");
-            Debug.Log("EnemyEntity is dead");
+            animator.SetTrigger(DieID);
+
+            _cl.enabled = false;
+            healthBar.gameObject.SetActive(false);
+
+            yield return new WaitForSeconds(2);
+            
+            healthBar.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+
+            animator.SetTrigger("Idle");
         }
 
         public override void TakeDamage(float amount)
@@ -27,15 +51,22 @@ namespace Entities.Enemy
             life -= amount;
 
             if (life <= 0)
-                Die();
+                StartCoroutine(Die());
             else
-                animator.SetTrigger("Damage");
+                animator.SetTrigger(DamageID);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player")
+            if (other.CompareTag("Player"))
                 other.GetComponent<Entity>().TakeDamage(damage);
+        }
+
+        public void Reset()
+        {
+            _cl.enabled = true;
+            
+            life = MaxLife;
         }
     }
 }

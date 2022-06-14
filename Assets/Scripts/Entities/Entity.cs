@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public abstract class Entity : MonoBehaviour
 {
@@ -18,5 +19,5 @@ public abstract class Entity : MonoBehaviour
             Die();
     }
 
-    protected abstract void Die();
+    protected abstract IEnumerator Die();
 }

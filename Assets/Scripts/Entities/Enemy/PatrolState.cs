@@ -38,8 +38,9 @@ public class PatrolState : StateMachineBehaviour
         if (player)
         {
             float distance = Vector3.Distance(playerTransfrom.position, animator.transform.position);
-            if (distance < chaseRange)
+            if (distance < chaseRange || animator.GetBool("HasBeenAttacked"))
                 animator.SetBool("IsChasing", true);
+            animator.SetBool("HasBeenAttacked", false);
         }
 
         if (agent.remainingDistance <= agent.stoppingDistance)
