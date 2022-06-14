@@ -729,6 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -813,6 +814,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &750130602
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +977,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 750130602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25550fc237e507a4886331a8532d20bc, type: 3}
+  m_Script: {fileID: 11500000, guid: f0339b495854cd04cbf8e46791a6b100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 750130604}
@@ -2131,7 +2152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794333617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e509f30c43e33904e8572a479035aad0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ac8cabb8656b324fa2c52d30927bad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1874579701
@@ -2333,7 +2354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22823778bb05c3a4fb4f0b5e62aea394, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a883d99639067646a79ee0847e5d5c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

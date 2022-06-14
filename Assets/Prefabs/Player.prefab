@@ -279,15 +279,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49a1b174434d0e4681b6d26c493654f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 2702564014064745165}
   speed: 10
   gravity: -9.81
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 2394689842700613613}
   groundMask:
   - serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   - serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   groundDistance: 0.4
   jumpHeight: 3
 --- !u!114 &4044337445739434712
@@ -406,7 +406,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 535
+    m_Bits: 991
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846bc09b0436d2d43b16a748b71cced9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 1200
+  mouseSensitivity: 240
   playerBody: {fileID: 2702564014064745164}
 --- !u!1 &6823472975239231317
 GameObject:
