@@ -15440,6 +15440,10 @@ PrefabInstance:
       propertyPath: mouseSensitivity
       value: 240
       objectReference: {fileID: 0}
+    - target: {fileID: 7120909912190431446, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7120909912813150317, guid: 56c9f9bc398938947938f0709afa908f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

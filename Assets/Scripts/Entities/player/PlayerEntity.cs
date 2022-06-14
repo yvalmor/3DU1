@@ -2,11 +2,11 @@
 
 namespace Entities.player
 {
-    public class Player : Entity
+    public class PlayerEntity : Entity
     {
         protected override void Die()
         {
-            Debug.Log("Player is dead");
+            Debug.Log("PlayerEntity is dead");
             
             // FIXME add a game over screen
         }
