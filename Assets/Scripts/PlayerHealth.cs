@@ -18,23 +18,14 @@ public class PlayerHealth : MonoBehaviour
     {
         // Set health to max
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
         // Set number of bullets to max
         currentBullets = maxBullets;
-        bulletCounter.SetMaxBullet(maxBullets);
         // Make disappear popup for reload 
         popUpReload.alpha = 0;
     }
 
     void Update()
     {
-        /* Only for test
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-            FireBullet();
-        }*/
-
         // Code to Reload
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -42,12 +33,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-    }
-
+    // function to fire a bullet
     void FireBullet()
     {
         // The player can fire
