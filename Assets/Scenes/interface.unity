@@ -672,7 +672,7 @@ MonoBehaviour:
   currentBullets: 0
   healthBar: {fileID: 612024941}
   bulletCounter: {fileID: 2062039553}
-  popUpReaload: {fileID: 1717179393}
+  popUpReload: {fileID: 1717179395}
 --- !u!1 &373644482
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,10 +997,10 @@ RectTransform:
   m_Father: {fileID: 449679867}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -311.3249, y: 203.53241}
-  m_SizeDelta: {x: 273.0065, y: 44.3929}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 209, y: -53}
+  m_SizeDelta: {x: 273.0065, y: 44.392883}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &612024941
 MonoBehaviour:
@@ -1951,6 +1951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1717179394}
+  - component: {fileID: 1717179395}
   m_Layer: 5
   m_Name: Interface Reload
   m_TagString: Untagged
@@ -1981,6 +1982,18 @@ RectTransform:
   m_AnchoredPosition: {x: 8.097, y: 4.2424}
   m_SizeDelta: {x: 233.44, y: 91.515}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1717179395
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717179393}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1784596809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,10 +2297,10 @@ RectTransform:
   m_Father: {fileID: 449679867}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 433.0392, y: -209}
-  m_SizeDelta: {x: 109.7415, y: 55.815}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -72, y: 48}
+  m_SizeDelta: {x: 109.741516, y: 55.815002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062039553
 MonoBehaviour:

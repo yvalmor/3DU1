@@ -12,28 +12,30 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
     public BulletCounter bulletCounter;
-    public GameObject popUpReaload;
+    public CanvasGroup popUpReload;
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (bulletCounter is null)
-            Debug.LogError("BulletCounter is null");
-
+        // Set health to max
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        // Set number of bullets to max
         currentBullets = maxBullets;
         bulletCounter.SetMaxBullet(maxBullets);
+        // Make disappear popup for reload 
+        popUpReload.alpha = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        /* Only for test
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
             FireBullet();
-        }
+        }*/
+
+        // Code to Reload
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(Reload());
@@ -43,22 +45,58 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
         healthBar.SetHealth(currentHealth);
     }
 
     void FireBullet()
     {
-        currentBullets--;
+        // The player can fire
+        if (currentBullets > 0)
+        {
+            currentBullets--;
+            bulletCounter.SetBullet(currentBullets);
+        }
+        // The player need to reload
+        if (currentBullets == 0)
+            StartCoroutine(NeedReload());
+    }
+
+    // Reload bullets after 0.5 sec
+    IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(0.5f);
+        currentBullets = maxBullets;
         bulletCounter.SetBullet(currentBullets);
     }
 
-    IEnumerator Reload()
+    IEnumerator NeedReload()
     {
-        popUpReaload.SetActive(true);
-        yield return new WaitForSeconds(2);
-        currentBullets = maxBullets;
-        bulletCounter.SetBullet(currentBullets);
-        popUpReaload.SetActive(false);
+        // Fade in popup for reload
+        StartCoroutine(FadeCanvasGroup(popUpReload, popUpReload.alpha, 1));
+        // Wait until the player reload
+        while (currentBullets == 0)
+            yield return null;
+        // Fade out popup for reload
+        StartCoroutine(FadeCanvasGroup(popUpReload, popUpReload.alpha, 0));
+    }
+
+    // Function to fade in or fade out a CanvasGroup
+    IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime = 0.5f)
+    {
+        float startTime = Time.time;
+        float duration = Time.time - startTime;
+        float currPercent = duration / lerpTime;
+
+        while (true)
+        {
+            duration = Time.time - startTime;
+            currPercent = duration / lerpTime;
+            float currValue = Mathf.Lerp(start, end, currPercent);
+            cg.alpha = currValue;
+
+            if (currPercent >= 1)
+                break;
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
