@@ -12,7 +12,7 @@ public class BulletCollision : MonoBehaviour
         if (entity != null) {
             entity.TakeDamage(bulletDamage);
         }
-
+        
         gameObject.SetActive(false);
     }
 }

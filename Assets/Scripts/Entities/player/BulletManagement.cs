@@ -6,31 +6,34 @@ using System.Linq;
 
 public class BulletManagement : MonoBehaviour
 {
-    [Range(10f, 200f)] public float propulsion;
+    [Range(0.1f, 200f)] public float propulsion;
     public float resetDistance = 100f;
     public ObjectPool pool;
     public Transform cameraTransform;
+    public Transform playerTransform;
 
-    private int firedBullets = 0;
-
+    public int bulletFired = 0;
+    
     private void Fire()
     {
-        if (firedBullets >= 20)
-            return;
-        
         GameObject bullet = pool.GetPooledObject();
 
         if (bullet is null) return;
-        
+
         bullet.transform.position = cameraTransform.position;
-        bullet.transform.rotation = cameraTransform.rotation;
+
+        Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
+        Vector3 rotation = new Vector3(cameraRotation.x, playerTransform.rotation.eulerAngles.y, cameraRotation.z);
+        
+        bullet.transform.rotation = Quaternion.Euler(0, 0, 0);
+        bullet.transform.Rotate(rotation);
 
         Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
         
-        bulletRigidbody.velocity += cameraTransform.forward * propulsion;
+        bulletRigidbody.velocity = bullet.transform.forward * propulsion;
         bullet.SetActive(true);
 
-        firedBullets++;
+        bulletFired++;
     }
 
     // Update is called once per frame
@@ -48,14 +51,8 @@ public class BulletManagement : MonoBehaviour
         foreach (var poolObject in pool.pooledObjects.Where(poolObject =>
                      poolObject.activeSelf &&
                      Vector3.Distance(poolObject.transform.position, transform.position) >= resetDistance))
-        {
             poolObject.SetActive(false);
-            firedBullets--;
-        }
-    }
-
-    public void PutBulletBack()
-    {
-        firedBullets--;
+        
+        
     }
 }
