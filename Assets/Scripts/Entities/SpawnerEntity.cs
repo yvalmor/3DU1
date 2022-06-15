@@ -21,6 +21,8 @@ namespace Entities
             _cl.enabled = false;
             
             Spawner.ReduceDelay();
+            
+            spawnerObject.GetComponent<Spawner>().Deactivate();
 
             Vector3 currentScale = Vector3.one;
             Vector3 targetScale = Vector3.zero;

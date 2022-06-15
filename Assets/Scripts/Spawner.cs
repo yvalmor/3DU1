@@ -13,6 +13,8 @@ public class Spawner : MonoBehaviour
     public float startingDelay = 0f;
     private static float repeatDelay = 10f;
 
+    private bool activated = true;
+
     private void Awake()
     {
         _tr = transform;
@@ -27,7 +29,7 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(startingDelay);
 
-        while (true)
+        while (activated)
         {
             GameObject enemy = _pool.GetPooledObject();
             
@@ -48,5 +50,10 @@ public class Spawner : MonoBehaviour
     public static void ReduceDelay()
     {
         repeatDelay = repeatDelay * 4 / 5;
+    }
+
+    public void Deactivate()
+    {
+        activated = false;
     }
 }
