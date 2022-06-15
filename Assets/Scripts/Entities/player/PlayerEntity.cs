@@ -8,9 +8,11 @@ namespace Entities.player
     {
         protected override IEnumerator Die()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
 
-            return null;
+            Cursor.lockState = CursorLockMode.None;
+            
+            yield break;
         }
     }
 }
