@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour
             
             if (enemy is not null)
             {
-                enemy.GetComponent<EnemyEntity>().Reset();
+                enemy.GetComponentInChildren<EnemyEntity>().Reset();
                 
                 enemy.transform.position = _tr.position;
                 enemy.transform.rotation = _tr.rotation;

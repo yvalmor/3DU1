@@ -1,4 +1,5 @@
 using System.Collections;
+using Entities.player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ namespace Entities.Enemy
         public Slider healthBar;
         public float damage;
         public float disappearanceRate = 1f;
+
+        public GameObject enemyObject;
 
         private Collider _cl;
 
@@ -41,19 +44,19 @@ namespace Entities.Enemy
 
             yield return new WaitForSeconds(2);
 
-            Vector3 baseScale = transform.localScale;
+            Vector3 baseScale = enemyObject.transform.localScale;
             Vector3 targetScale = Vector3.zero;
 
-            while (transform.localScale.x > 0.01)
+            while (enemyObject.transform.localScale.x > 0.01)
             {
-                transform.localScale =
-                    Vector3.Lerp(transform.localScale, targetScale, disappearanceRate * Time.deltaTime);
+                enemyObject.transform.localScale =
+                    Vector3.Lerp(enemyObject.transform.localScale, targetScale, disappearanceRate * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
             
             healthBar.gameObject.SetActive(true);
-            gameObject.SetActive(false);
-            transform.localScale = baseScale;
+            enemyObject.gameObject.SetActive(false);
+            enemyObject.transform.localScale = baseScale;
 
             animator.SetTrigger("Idle");
         }
@@ -71,7 +74,7 @@ namespace Entities.Enemy
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
-                other.GetComponent<Entity>().TakeDamage(damage);
+                other.GetComponent<PlayerEntity>().TakeDamage(damage);
         }
 
         public void Reset()
