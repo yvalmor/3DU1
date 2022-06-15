@@ -23,6 +23,9 @@ public class BulletManagement : MonoBehaviour
 
     private void Fire()
     {
+        if (PauseMenu.GameIsPaused)
+            return;
+            
         GameObject bullet = pool.GetPooledObject();
 
         if (bullet is null) return;
