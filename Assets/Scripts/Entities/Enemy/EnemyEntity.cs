@@ -1,6 +1,7 @@
 using System.Collections;
 using Entities.player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Entities.Enemy
@@ -59,6 +60,13 @@ namespace Entities.Enemy
             enemyObject.transform.localScale = baseScale;
 
             animator.SetTrigger("Idle");
+
+            enemyCounter--;
+
+            if (spawnerCounter == 0 && enemyCounter == 0)
+                SceneManager.LoadScene(0);
+
+            dead = false;
         }
 
         public override void TakeDamage(float amount)

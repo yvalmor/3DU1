@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Entities
@@ -40,11 +41,21 @@ namespace Entities
                 yield return new WaitForEndOfFrame();
             }
 
+            spawnerCounter--;
+
+            if (spawnerCounter == 0 && enemyCounter == 0)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene(0);
+            }
+            
             Destroy(spawnerObject);
         }
 
         private void Start()
         {
+            spawnerCounter++;
+            
             life = MaxLife;
             healthBar.maxValue = MaxLife;
             _cl = GetComponent<Collider>();

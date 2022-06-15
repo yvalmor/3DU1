@@ -16,15 +16,14 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 3f;
 
     Vector3 velocity;
-    bool isGrounded;
+    public bool isGrounded;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         isGrounded = groundMask.Any(mask => Physics.CheckSphere(groundCheck.position, groundDistance, mask));
 
         if (isGrounded && velocity.y < 0)
-            velocity.y = -2f;
+            velocity.y = 0f;
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -36,7 +35,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-        velocity.y += gravity * Time.deltaTime;
+        if (!isGrounded)
+            velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
 }
