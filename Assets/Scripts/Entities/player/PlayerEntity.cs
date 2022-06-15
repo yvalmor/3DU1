@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Entities.player
 {
@@ -7,9 +8,7 @@ namespace Entities.player
     {
         protected override IEnumerator Die()
         {
-            Debug.Log("PlayerEntity is dead");
-            
-            // FIXME add a game over screen
+            SceneManager.LoadScene(0);
 
             return null;
         }

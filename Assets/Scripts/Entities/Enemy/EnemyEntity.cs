@@ -65,6 +65,8 @@ namespace Entities.Enemy
 
             if (spawnerCounter == 0 && enemyCounter == 0)
                 SceneManager.LoadScene(0);
+
+            dead = false;
         }
 
         public override void TakeDamage(float amount)

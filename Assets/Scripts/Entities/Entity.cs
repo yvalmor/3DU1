@@ -5,6 +5,7 @@ public abstract class Entity : MonoBehaviour
 {
     public float MaxLife = 100f;
     public float life;
+    protected bool dead = false;
 
     public static int enemyCounter = 0;
     protected static int spawnerCounter = 0;
@@ -17,9 +18,11 @@ public abstract class Entity : MonoBehaviour
     public virtual void TakeDamage(float amount)
     {
         life = Mathf.Clamp(life - amount, 0, MaxLife);
+
+        if (life > 0 || dead) return;
         
-        if (life == 0)
-            StartCoroutine(Die());
+        StartCoroutine(Die());
+        dead = true;
     }
 
     protected abstract IEnumerator Die();
