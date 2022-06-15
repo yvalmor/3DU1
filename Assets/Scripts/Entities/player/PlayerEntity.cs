@@ -8,9 +8,8 @@ namespace Entities.player
     {
         protected override IEnumerator Die()
         {
-            SceneManager.LoadScene(0);
-
-            return null;
+            SceneManager.LoadScene("GameOver");
+            yield break;
         }
     }
 }
