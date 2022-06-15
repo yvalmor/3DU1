@@ -63,8 +63,10 @@ namespace Entities.Enemy
             enemyCounter--;
 
             if (spawnerCounter == 0 && enemyCounter == 0)
+            {
                 Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene("3");
+                SceneManager.LoadScene(3);
+            }
 
             dead = false;
         }
