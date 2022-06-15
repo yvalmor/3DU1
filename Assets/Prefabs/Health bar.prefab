@@ -101,23 +101,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6125984378011903320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a104a48d9fc1c84e9899e3592067866, type: 3}
+  m_Script: {fileID: 11500000, guid: 588769347f06ea34ca566fbe410191c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 6125984378011903325}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.9921569, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.9780377, b: 0, a: 1}
-    key2: {r: 0.1960395, g: 1, b: 0.1273585, a: 0}
-    key3: {r: 0.1960395, g: 1, b: 0.1273585, a: 0}
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.5058823, b: 0, a: 1}
+    key2: {r: 0.9348153, g: 1, b: 0, a: 0}
+    key3: {r: 0.018967986, g: 1, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 33539
-    ctime2: 65535
+    ctime1: 21781
+    ctime2: 43562
     ctime3: 65535
     ctime4: 0
     ctime5: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 3
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   fill: {fileID: 6125984378494329736}
   entity: {fileID: 0}

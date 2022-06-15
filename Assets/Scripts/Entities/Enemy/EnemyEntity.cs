@@ -9,6 +9,7 @@ namespace Entities.Enemy
         public Animator animator;
         public Slider healthBar;
         public float damage;
+        public float disappearanceRate = 1f;
 
         private Collider _cl;
 
@@ -39,9 +40,20 @@ namespace Entities.Enemy
             healthBar.gameObject.SetActive(false);
 
             yield return new WaitForSeconds(2);
+
+            Vector3 baseScale = transform.localScale;
+            Vector3 targetScale = Vector3.zero;
+
+            while (transform.localScale.x > 0.01)
+            {
+                transform.localScale =
+                    Vector3.Lerp(transform.localScale, targetScale, disappearanceRate * Time.deltaTime);
+                yield return new WaitForEndOfFrame();
+            }
             
             healthBar.gameObject.SetActive(true);
             gameObject.SetActive(false);
+            transform.localScale = baseScale;
 
             animator.SetTrigger("Idle");
         }

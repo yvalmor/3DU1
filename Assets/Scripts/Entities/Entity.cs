@@ -16,7 +16,7 @@ public abstract class Entity : MonoBehaviour
         life = Mathf.Clamp(life - amount, 0, MaxLife);
         
         if (life == 0)
-            Die();
+            StartCoroutine(Die());
     }
 
     protected abstract IEnumerator Die();

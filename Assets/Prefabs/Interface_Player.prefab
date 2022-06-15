@@ -50,11 +50,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778680948325340258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a62db5206fc6c4f84f20e5cfd95b93, type: 3}
+  m_Script: {fileID: 11500000, guid: 79c38d491dfdeef4c9c42bceb028538e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currBulletText: {fileID: 0}
-  maxBulletText: {fileID: 0}
+  currBulletText: {fileID: 1778680949099094148}
+  maxBulletText: {fileID: 1778680950241455335}
 --- !u!1 &1778680948327321361
 GameObject:
   m_ObjectHideFlags: 0
