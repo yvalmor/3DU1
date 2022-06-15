@@ -46,7 +46,7 @@ namespace Entities
             if (spawnerCounter == 0 && enemyCounter == 0)
             {
                 Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(3);
             }
             
             Destroy(spawnerObject);

@@ -12,7 +12,6 @@ namespace Entities.Enemy
         public Slider healthBar;
         public float damage;
         public float disappearanceRate = 1f;
-
         public GameObject enemyObject;
 
         private Collider _cl;
@@ -64,7 +63,8 @@ namespace Entities.Enemy
             enemyCounter--;
 
             if (spawnerCounter == 0 && enemyCounter == 0)
-                SceneManager.LoadScene(0);
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene("3");
 
             dead = false;
         }

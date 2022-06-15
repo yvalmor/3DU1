@@ -8,10 +8,8 @@ namespace Entities.player
     {
         protected override IEnumerator Die()
         {
-            SceneManager.LoadScene(3);
-
+            SceneManager.LoadScene(4);
             Cursor.lockState = CursorLockMode.None;
-            
             yield break;
         }
     }
