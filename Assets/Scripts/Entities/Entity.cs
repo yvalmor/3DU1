@@ -7,7 +7,7 @@ public abstract class Entity : MonoBehaviour
     public float life;
 
     public static int enemyCounter = 0;
-    public static int spawnerCounter = 0;
+    protected static int spawnerCounter = 0;
 
     private void Start()
     {
