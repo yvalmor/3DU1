@@ -41,6 +41,8 @@ public class Spawner : MonoBehaviour
                 enemy.transform.rotation = _tr.rotation;
 
                 enemy.SetActive(true);
+
+                Entity.enemyCounter++;
             }
 
             yield return new WaitForSeconds(repeatDelay);

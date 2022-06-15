@@ -6,6 +6,9 @@ public abstract class Entity : MonoBehaviour
     public float MaxLife = 100f;
     public float life;
 
+    public static int enemyCounter = 0;
+    public static int spawnerCounter = 0;
+
     private void Start()
     {
         life = MaxLife;
