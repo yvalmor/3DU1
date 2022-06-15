@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -19,6 +20,9 @@ public class PlayerController : MonoBehaviour
     Vector3 velocity;
     public bool isGrounded;
 
+    private static readonly int IsJumping = Animator.StringToHash("IsJumping");
+    private static readonly int IsRunning = Animator.StringToHash("IsRunning");
+
     void FixedUpdate()
     {
         isGrounded = groundMask.Any(mask => Physics.CheckSphere(groundCheck.position, groundDistance, mask));
@@ -29,23 +33,23 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        if (x != 0 || z != 0)
-            animator.SetBool("IsRunning", true);
-        else
-            animator.SetBool("IsRunning", false);
+        animator.SetBool(IsRunning, x != 0 || z != 0);
 
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(speed * Time.deltaTime * move);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator.SetTrigger("IsJumping");
-        }
-
         if (!isGrounded)
             velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetTrigger(IsJumping);
+        }
     }
 }
