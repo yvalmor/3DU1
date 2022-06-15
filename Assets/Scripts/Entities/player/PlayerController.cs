@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 12f;
     public float gravity = -9.81f;
+    public Animator animator;
 
     public Transform groundCheck;
     public List<LayerMask> groundMask;
@@ -28,12 +29,20 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        if (x != 0 || z != 0)
+            animator.SetBool("IsRunning", true);
+        else
+            animator.SetBool("IsRunning", false);
+
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(speed * Time.deltaTime * move);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
+        {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetTrigger("IsJumping");
+        }
 
         if (!isGrounded)
             velocity.y += gravity * Time.deltaTime;
