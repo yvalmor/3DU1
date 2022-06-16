@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 240
-  authorizedAngle: {x: -75, y: 90}
+  authorizedAngle: {x: -90, y: 90}
   playerBody: {fileID: 5052933147172077141}
 --- !u!1 &5052933147172077129
 GameObject:
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propulsion: 20
-  resetDistance: 100
+  resetDistance: 300
   pool: {fileID: 6185934847211159935}
   cameraTransform: {fileID: 5052933147129243214}
   playerTransform: {fileID: 5052933147172077141}
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjects: []
   objectToPool: {fileID: 6368757430604345941, guid: 72fd84cc49eb7e748932368286f9afd1, type: 3}
-  amountToPool: 60
+  amountToPool: 100
 --- !u!1 &8778034521917898878
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0

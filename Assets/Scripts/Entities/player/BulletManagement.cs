@@ -12,7 +12,7 @@ public class BulletManagement : MonoBehaviour
 
     public BulletCounter counter;
     public ReloadInterface reloadInterface;
-    
+
     public int bulletFired = 0;
 
     private void Start()
@@ -24,18 +24,18 @@ public class BulletManagement : MonoBehaviour
     {
         if (PauseMenu.GameIsPaused)
             return;
-            
+
         GameObject bullet = pool.GetPooledObject();
 
         if (bullet is null) return;
-        
+
         Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
         Vector3 rotation = new Vector3(cameraRotation.x, playerTransform.rotation.eulerAngles.y, cameraRotation.z);
-        
+
         bullet.transform.SetPositionAndRotation(cameraTransform.position, Quaternion.Euler(rotation));
-        
+
         Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
-        
+
         bulletRigidbody.velocity = bullet.transform.forward * propulsion;
         bullet.SetActive(true);
 
@@ -43,7 +43,7 @@ public class BulletManagement : MonoBehaviour
 
         bulletFired++;
         counter.SetBullet(20 - bulletFired);
-        
+
         if (bulletFired == 17)
             reloadInterface.FadeIn();
     }
@@ -53,7 +53,7 @@ public class BulletManagement : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && bulletFired < 20)
             Fire();
-        
+
         if (Input.GetButtonDown("Fire2"))
             Reload();
     }
@@ -62,12 +62,12 @@ public class BulletManagement : MonoBehaviour
     {
         foreach (var poolObject in pool.pooledObjects.Where(poolObject =>
                      poolObject.activeSelf &&
-                     Vector3.Distance(poolObject.transform.position, transform.position) >= resetDistance))
+                     Vector3.Distance(poolObject.transform.position, transform.position) >= resetDistance / 2))
             poolObject.SetActive(false);
 
         bulletFired = 0;
         counter.SetBullet(20);
-        
+
         reloadInterface.FadeOut();
     }
 }
