@@ -31,8 +31,6 @@ public class BulletManagement : MonoBehaviour
 
         if (bullet is null) return;
 
-        audioSource.Play();
-        
         Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
         Vector3 rotation = new Vector3(cameraRotation.x, playerTransform.rotation.eulerAngles.y, cameraRotation.z);
 
@@ -50,6 +48,8 @@ public class BulletManagement : MonoBehaviour
 
         if (bulletFired == 17)
             reloadInterface.FadeIn();
+        
+        audioSource.Play();
     }
 
     // Update is called once per frame
