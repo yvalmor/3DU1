@@ -32,7 +32,7 @@ public class BulletManagement : MonoBehaviour
         Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
         Vector3 rotation = new Vector3(cameraRotation.x, playerTransform.rotation.eulerAngles.y, cameraRotation.z);
         
-        bullet.transform.SetPositionAndRotation(playerTransform.position, Quaternion.Euler(rotation));
+        bullet.transform.SetPositionAndRotation(cameraTransform.position, Quaternion.Euler(rotation));
         
         Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
         
