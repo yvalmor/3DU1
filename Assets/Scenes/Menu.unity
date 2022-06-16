@@ -516,8 +516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -60.240005}
-  m_SizeDelta: {x: 352.6375, y: 2.1202}
+  m_AnchoredPosition: {x: 7.0000153, y: -60.240005}
+  m_SizeDelta: {x: 386.63757, y: 2.1202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &387944904
 MonoBehaviour:
@@ -738,8 +738,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -198}
-  m_SizeDelta: {x: 72.7115, y: -31.7945}
+  m_AnchoredPosition: {x: -10, y: -176.5}
+  m_SizeDelta: {x: 72.7115, y: 11.205597}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411897509
 MonoBehaviour:
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '  Shooting Range
+  m_text: 'SHOOTING RANGE
 
 '
   m_isRightToLeft: 0
@@ -1343,7 +1343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0339b495854cd04cbf8e46791a6b100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSource: {fileID: 750130604}
 --- !u!1 &805355648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805355650
@@ -2309,7 +2308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Game
+  m_text: MAIN GAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -2558,8 +2557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: 41.88}
-  m_SizeDelta: {x: 188.02173, y: 2.1202393}
+  m_AnchoredPosition: {x: -15.000019, y: 41.88}
+  m_SizeDelta: {x: 210.02176, y: 2.1202393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534786442
 MonoBehaviour:
@@ -2982,96 +2981,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7920779294121428966, guid: 593277dbf1c0e35418af82b616a207b1, type: 3}
   m_PrefabInstance: {fileID: 7920779293508720401}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874579701}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eb2f99544e24d8b449fe910d94a8bf30, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.2
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1883966942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,8 +3016,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: 179}
-  m_SizeDelta: {x: 188.02173, y: 2.1202393}
+  m_AnchoredPosition: {x: -10, y: 164}
+  m_SizeDelta: {x: 188.02173, y: -27.879791}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1883966944
 MonoBehaviour:
