@@ -12,6 +12,8 @@ public class BulletManagement : MonoBehaviour
 
     public BulletCounter counter;
     public ReloadInterface reloadInterface;
+
+    public AudioSource audioSource;
     
     public int bulletFired = 0;
 
@@ -28,6 +30,9 @@ public class BulletManagement : MonoBehaviour
         GameObject bullet = pool.GetPooledObject();
 
         if (bullet is null) return;
+
+        audioSource.Play();
+
         
         Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
         Vector3 rotation = new Vector3(cameraRotation.x, playerTransform.rotation.eulerAngles.y, cameraRotation.z);
